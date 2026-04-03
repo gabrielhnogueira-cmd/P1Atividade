@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+
 import 'app/views/splash_page.dart';
 import 'app/views/login_page.dart';
 import 'app/views/signup_page.dart';
+import 'app/views/home_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -22,6 +24,7 @@ class MyApp extends StatelessWidget {
         '/': (context) => const SplashPage(),
         '/login': (context) => const LoginPage(),
         '/signup': (context) => const RegisterPage(),
+        '/home': (context) => const HomePage(),
       },
     );
   }

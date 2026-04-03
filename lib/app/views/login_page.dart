@@ -114,7 +114,7 @@ class _LoginPageState extends State<LoginPage> {
                         child: ElevatedButton(
                           onPressed: viewModel.isLoading
                               ? null
-                              : () {
+                              : () async {
                                   if (viewModel.formKey.currentState?.validate() ?? false) {
                                     final email = viewModel.emailController.text.trim();
                                     final senha = viewModel.passwordController.text;
@@ -128,9 +128,17 @@ class _LoginPageState extends State<LoginPage> {
                                     }
                                     if (usuario != null) {
                                       ScaffoldMessenger.of(context).showSnackBar(
-                                        const SnackBar(content: Text('Login realizado com sucesso!')),
+                                        const SnackBar(
+                                          content: Text('Login realizado com sucesso!'),
+                                          duration: Duration(seconds: 2),
+                                        ),
                                       );
-                                      // Aqui você pode navegar para a tela principal
+
+                                      await Future.delayed(const Duration(seconds: 2));
+
+                                      if (!mounted) return;
+
+                                      Navigator.pushReplacementNamed(context, '/home');
                                     } else {
                                       ScaffoldMessenger.of(context).showSnackBar(
                                         const SnackBar(content: Text('Usuário ou senha inválidos!')),
