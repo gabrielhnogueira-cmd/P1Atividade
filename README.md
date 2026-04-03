@@ -1,9 +1,9 @@
 # P1 - Projeto Flutter com Splash, Login, Cadastro e Home
 
 ## Integrantes
-- Nome 1
-- Nome 2
-- Nome 3
+- Gabriel Henrique Lopes Nogueira RA: 25000243
+- Guilherme Ernando Ribeiro Alves RA: 24002028
+- Raphael Lucio Quillles RA: 25000824
 
 ## Descrição do projeto
 Este projeto foi desenvolvido em Flutter com o objetivo de demonstrar navegação entre telas, uso de formulários, validação e organização arquitetural, utilizando dados mockados em memória para simular o cadastro e a autenticação de usuários.
